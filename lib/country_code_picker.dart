@@ -173,6 +173,9 @@ class CountryCodePickerState extends State<CountryCodePicker> {
     if (widget.builder != null) {
       internalWidget = InkWell(
         overlayColor: WidgetStateProperty.all(Colors.transparent),
+        hoverColor: Colors.transparent,
+        focusColor: Colors.transparent,
+        highlightColor: Colors.transparent,
         onTap: widget.enabled ? showCountryCodePickerDialog : null,
         child: widget.builder!(selectedItem),
       );
