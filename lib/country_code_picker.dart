@@ -127,7 +127,8 @@ class CountryCodePicker extends StatefulWidget {
     this.dialogBackgroundColor,
     this.closeIcon = const Icon(Icons.close),
     this.countryList = codes,
-    this.dialogItemPadding = const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+    this.dialogItemPadding =
+        const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
     this.searchPadding = const EdgeInsets.symmetric(horizontal: 24),
     Key? key,
   }) : super(key: key);
@@ -171,6 +172,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
     Widget internalWidget;
     if (widget.builder != null) {
       internalWidget = InkWell(
+        overlayColor: WidgetStateProperty.all(Colors.transparent),
         onTap: widget.enabled ? showCountryCodePickerDialog : null,
         child: widget.builder!(selectedItem),
       );
